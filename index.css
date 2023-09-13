@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body{
+    height :100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    background-color: hsl(0%, 0%, 98%);
+}
+
+.container{
+    width: 1440px;
+    height: 922px;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all .4s ease-out;
+}
+
+.header_container{
+    width: 510px;
+    height: 170px;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: all .4s ease-out;
+}
+
+.container_header_title{
+    font-size: 2.3rem;
+    line-height: 3.1rem;
+    color: hsl(234, 12%, 34%);
+    font-weight: 500;
+}
+
+.container_header_title span{
+    font-weight: 100;
+    font-size: 2.32rem;
+}
+
+.container_header_description{
+    margin-top: 11px;
+    font-weight: 300;
+    font-size: .965rem;
+    line-height: 1.6rem;
+    color: hsl(229, 6%, 66%);
+}
+
+.content{
+    width: 1110px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 140px 110px 30px 110px 140px;
+    transition: all .4s ease-out;
+}
+
+.card{
+    width: 350px;
+    height: 250px;
+    padding: 1.7rem 2rem 1.98rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 15px 35px -15px rgba(8, 36, 159, 0.25);
+    transition: all .4s ease-out;
+}
+
+.card-header-title{
+    margin-bottom: 8px;
+    font-size: 1.23rem;
+    letter-spacing: 0.005;
+    font-weight: 500;
+    color:  hsl(234, 12%, 34%);
+}
+
+.card-header-content{
+    font-size: 0.8rem;
+    letter-spacing: 0.021;
+    line-height: 22px;
+    font-weight: 300;
+    color: hsl(229, 6%, 66%);
+}
+
+.card-footer{
+    width: 100px;
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.card:nth-child(1){
+    grid-row: 2 / 5;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card:nth-child(2){
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card:nth-child(3){
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+    border-top: 4px solid hsl(34 97% 64%);
+}
+
+.card:nth-child(4){
+    justify-content: flex-end;
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    border-top: 4px solid hsl(212 86% 64%);
+}
+
+@media  screen and (max-width: 1120px) {
+
+   body{
+    align-items: flex-start;
+   } 
+
+   .container{
+    width: 100px;
+    height: auto;
+    padding: 4.6rem 3rem;
+   }
+
+   .content{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .card{
+    margin: 0px 12px 0px 12px;
+   }
+}
+
+@media  screen and (max-width: 550px){
+    .card{
+        margin-top: 170px;
+    }
+    .container{
+        padding: 4.5rem 2rem;
+    }
+
+    .header_container{
+        height: 167px;
+    }
+
+    .container_header_title{
+        font-size: 6.3vw;
+        line-height: 9.1vw;
+    }
+
+    .container_header_title span{
+        font-size: 6.3vw;
+    }
+
+    .container_header_description{
+        width: 95%;
+        margin-top: .5rem;
+        font-size: .95rem;
+        line-height: 1.45rem;
+    }
+}
+
+@media  screen and (max-width: 400px){
+    .container{
+        padding-top: 4.9rem;
+    }
+
+    .header_container{
+        height: 175px;
+        margin-bottom: 3.45rem;
+    } 
+
+    .container_header_title{
+        line-height: 10vw;
+    }
+
+    .container_header_description{
+        margin-top: 0;
+        font-size: 4vw;
+        line-height: 1.55rem;
+    } 
+
+    .card{
+        margin-top: 170px;
+        width: 150%;
+        height: 280px;
+        padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+    }
+
+    .card-header-title{
+        margin-bottom: 4px;
+        font-size: 1.15rem;
+    }
+
+    .card-header-content{
+        line-height: 23px;
+    }
+
+    .card-img{
+        height: 58px
+    }
+}
